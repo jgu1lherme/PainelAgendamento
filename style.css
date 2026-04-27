@@ -1,1 +1,159 @@
+        /* Reset básico para remover margens padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
+        /* Configuração do fundo para ocupar a tela toda */
+        body {
+            /* SUBSTITUA O URL ABAIXO PELO CAMINHO DA SUA IMAGEM */
+            background-image: url('assets/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* Evita barra de rolagem se não houver conteúdo extra */
+        }
+
+        header {
+            background-color: white;
+            width: 100%;
+            padding: 20px 40px;
+            /* Reduzi um pouco o padding vertical para a logo não ficar gigante */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            /* Garante que o texto e a logo fiquem alinhados no meio (altura) */
+        }
+
+        /* Estilização da Logo */
+        .logo-header {
+            height: 60px;
+            /* Ajuste o tamanho conforme sua imagem */
+            width: auto;
+            margin-left: auto;
+            padding: 3px;
+
+        }
+
+        /* Manter a faixa RGB que fizemos antes */
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #003399, #662d91, #ed1c24, #f7941d, #fff200, #00a651);
+        }
+
+        header h1 {
+            color: #2c3e50;
+            font-size: 31px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Container principal para centralizar os botões */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 0px;
+            margin-left: 70px;
+        }
+
+        .botoes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* botão estilizado */
+        .botoes-container a {
+            display: flex;
+            /* chave pra centralizar de verdade */
+            justify-content: center;
+            /* horizontal */
+            align-items: center;
+            /* vertical */
+
+            padding: 15px 20px;
+            font-size: 24px;
+            text-align: center;
+
+            text-decoration: none;
+            color: white;
+
+            border-radius: 10px;
+            /* exemplo */
+            transition: 0.2s;
+        }
+
+        /* efeito hover */
+        .botoes-container a:hover {
+            transform: scale(1.03);
+        }
+
+        /* Estilo moderno dos botões */
+        .btn-flutuante1 {
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            width: 500px;
+            color: #ffffff;
+            background-color: #ffb400;
+            /* Azul profissional */
+            border: none;
+            border-radius: 7px;
+            /* Bordas bem arredondadas */
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            ;
+        }
+
+        /* Efeito ao passar o mouse por cima (Hover) */
+        .btn-flutuante1:hover {
+            background-color: #f5ac02;
+            transform: translateY(-5px);
+            /* Dá a sensação de flutuar */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo moderno dos botões */
+        .btn-flutuante2 {
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            width: 500px;
+            height: 120px;
+            color: #ffffff;
+            background-color: #0756b8;
+            /* Azul profissional */
+            border: none;
+            border-radius: 7px;
+            /* Bordas bem arredondadas */
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            ;
+        }
+
+        /* Efeito ao passar o mouse por cima (Hover) */
+        .btn-flutuante2:hover {
+            background-color: #064ba0;
+            transform: translateY(-5px);
+            /* Dá a sensação de flutuar */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
